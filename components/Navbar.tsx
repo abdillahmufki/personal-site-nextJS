@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Button from "./Button";
+import { NAVBAR_LIST } from "@/constants";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,15 +23,14 @@ const Navbar = () => {
     };
   }, []);
 
-  const navClass = `navbar fixed z-50 w-full top-0 lg:px-16 ${
-    isScrolled ? "bg-white z-50 drop-shadow-lg" : "bg-white"
+  const navClass = `navbar sticky z-50 w-full top-0 lg:px-5  ${
+    isScrolled ? "bg-white z-50 shadow-md z-50" : "bg-white flex item-center"
   }`;
 
   return (
     <nav
-      className={`navbar ${navClass} ${
-        isScrolled ? "scrolled" : ""
-      } bg-base-100`}>
+      className={`navbar ${navClass} ${isScrolled ? "scrolled" : ""} bg-white`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -38,7 +39,8 @@ const Navbar = () => {
               className="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor">
+              stroke="currentColor"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -49,53 +51,34 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow--md bg-gray-20 hover:text-white rounded-box w-52"
+          >
+            {NAVBAR_LIST.map((item, index) => (
+              <li key={index} className="text-black">
+                <Link href={item.href} className="hover:bg-gray-10 ">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Abdillah Mufki Auzan Mubin</a>
+        <a className="btn btn-ghost text-lg text-black max-[526px]:hidden me-3">
+          Abdillah Mufki Auzan Mubin
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li tabIndex={0}>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
+          {NAVBAR_LIST.map((item, index) => (
+            <li key={index} className="text-black">
+              <Link href={item.href} className="hover:bg-base-200">
+                {item.title}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="navbar-end">
-        <Button type="button" title="Download CV" variant="btn_dark_green" />
+        <Button type="button" title="Download CV" variant="btn_dark_blue" />
       </div>
     </nav>
   );

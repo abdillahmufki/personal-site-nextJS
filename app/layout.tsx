@@ -17,9 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <main className="flex min-h-screen bg-white flex-col items-center justify-between p-24">
-          {children}
-        </main>
+        <main className="relative overflow-hidden">{children}</main>
         <Footer />
       </body>
     </html>

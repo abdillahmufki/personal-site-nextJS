@@ -87,3 +87,14 @@ export const PROJECT_DATA = [
     link: "https://github.com/abdillahmufki/Project-Uas-Management-kecamatan",
   },
 ];
+
+
+export const NAVBAR_LIST  =  [
+  { title: "Home", href: "#home" },
+  { title: "About", href: "#about" },
+  { title: "Skills", href: "#skills" },
+  { title: "Qualification", href: "#qualification" },
+  { title: "Services", href: "#services" },
+  { title: "Portfolio", href: "#portfolio" },
+  { title: "Contact", href: "#contact" },
+];

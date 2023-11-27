@@ -8,9 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        green: {
-          50: "#30AF5B",
-          90: "#292C27",
+        blue: {
+          50: "#427D9D",
+          90: "#164863",
+          95: "#526D82",
         },
         gray: {
           10: "#EEEEEE",
@@ -22,11 +23,11 @@ module.exports = {
         orange: {
           50: "#FF814C",
         },
-        blue: {
-          70: "#021639",
-        },
         yellow: {
           50: "#FEC601",
+        },
+        while: {
+          50: "#f9fafb",
         },
       },
       backgroundImage: {
