@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Accordion from "@/components/Accordion";
 
 const Skills = () => {
   return (
     <div>
-      Skills
+      <Accordion />
     </div>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

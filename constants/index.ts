@@ -88,8 +88,7 @@ export const PROJECT_DATA = [
   },
 ];
 
-
-export const NAVBAR_LIST  =  [
+export const NAVBAR_LIST = [
   { title: "Home", href: "#home" },
   { title: "About", href: "#about" },
   { title: "Skills", href: "#skills" },
@@ -97,4 +96,25 @@ export const NAVBAR_LIST  =  [
   { title: "Services", href: "#services" },
   { title: "Portfolio", href: "#portfolio" },
   { title: "Contact", href: "#contact" },
+];
+
+export const ICON_HERO = [
+  {
+    href: "https://www.linkedin.com/in/abdillah-mufki-auzan-mubin-55a873212/",
+    title: "LinkedIn",
+    src: "/icon/linkedin.svg",
+    alt: "Picture of the author",
+  },
+  {
+    href: "https://github.com/abdillahmufki",
+    title: "Github",
+    src: "/icon/github.svg",
+    alt: "Picture of the author",
+  },
+  {
+    href: "https://www.instagram.com/mufkimustache/",
+    title: "Instagram",
+    src: "/icon/instagram.svg",
+    alt: "Picture of the author",
+  },
 ];
