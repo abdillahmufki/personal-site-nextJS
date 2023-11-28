@@ -118,3 +118,10 @@ export const ICON_HERO = [
     alt: "Picture of the author",
   },
 ];
+
+export const PEOPLE_URL = [
+  "/person-1.png",
+  "/person-2.png",
+  "/person-3.png",
+  "/person-4.png",
+];

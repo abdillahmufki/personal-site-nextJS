@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Button from "./Button";
 import { NAVBAR_LIST } from "@/constants";
 import Link from "next/link";
 
@@ -23,13 +22,12 @@ const Navbar = () => {
     };
   }, []);
 
-  const navClass = `navbar sticky z-50 w-full top-0 lg:px-5  ${
+  const navClass = `fixed z-50 lg:px-5  ${
     isScrolled ? "bg-white z-50 shadow-md" : "bg-white"
   }`;
 
   return (
-    <nav
-      className={`navbar ${navClass} ${isScrolled ? "scrolled" : ""} bg-white`}>
+    <nav className={`navbar ${navClass} ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -80,14 +78,6 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-      {/* <div className="navbar-end">
-        <Button
-          type="button"
-          title="Download CV"
-          variant="btn_dark_blue"
-          icon="/icon/download.svg"
-        />
-      </div> */}
     </nav>
   );
 };
