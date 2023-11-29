@@ -1,33 +1,37 @@
 import Button from "@/components/Button";
 import Image from "next/image";
 import Link from "next/link";
-import { ICON_HERO } from "@/constants";
+import { ICON_HERO, ICON_DATA_TECH } from "@/constants";
 
-interface BackgroundProps {
-  backgroundImage: string;
-  children: React.ReactNode;
+interface IconProps {
+  src: string;
+  alt: string;
+  className?: string;
 }
 
-const Background = ({ backgroundImage, children }: BackgroundProps) => {
+const Icon = ({ src, alt, className }: IconProps) => {
   return (
-    <div className="h-full flex justify-center">
-      <div className={` ${backgroundImage} bg-contain bg-no-repeat w-full p-5`}>
-        {children}
-      </div>
-    </div>
+    <Image
+      src={src}
+      alt={`${alt} icon`}
+      width={30}
+      height={30}
+      className={className}
+      style={{ width: "30", height: "30" }}
+    />
   );
 };
 const Hero = () => {
   return (
-    <section className="flex lg:flex-row relative bg-gradient flex-col gap-10 py-24 justify-center items-center min-h-screen lg:py-24 p-5">
-      <div className="flex lg:flex-col flex-row gap-5">
+    <section className="flex lg:flex-row flex-col relative bg-gradient gap-10 py-24 justify-center lg:items-center min-h-screen lg:py-24 p-5">
+      <div className="flex flex-row justify-center lg:flex-col gap-5">
         {ICON_HERO.map((item, index) => (
           <Link target="_blank" href={item.href} key={index}>
             <Image
               src={item.src}
               alt={item.title}
-              width={35}
-              height={35}
+              width={40}
+              height={40}
               className="cursor-pointer"
             />
           </Link>
@@ -65,47 +69,15 @@ const Hero = () => {
             style={{ width: "250", height: "250" }}
           />
         </div>
-        <div className="flex gap-3 flex-col">
-          <Image
-            src="/icon/html.svg"
-            alt="Picture of the author"
-            width={30}
-            height={30}
-            className="animate-bounce"
-            style={{ width: "30", height: "30" }}
-          />
-          <Image
-            src="/icon/css.svg"
-            alt="Picture of the author"
-            width={30}
-            height={30}
-            className="animate-bounce"
-            style={{ width: "30", height: "30" }}
-          />
-          <Image
-            src="/icon/js.svg"
-            alt="Picture of the author"
-            width={30}
-            height={30}
-            className="animate-bounce"
-            style={{ width: "30", height: "30" }}
-          />
-          <Image
-            src="/icon/react.svg"
-            alt="Picture of the author"
-            width={30}
-            height={30}
-            className="lg:animate-spin animate-bounce"
-            style={{ width: "30", height: "30" }}
-          />
-          <Image
-            src="/icon/nextjs-solid.svg"
-            alt="Picture of the author"
-            width={30}
-            height={30}
-            className="animate-bounce"
-            style={{ width: "30", height: "30" }}
-          />
+        <div className="flex gap-3 lg:flex-col flex-row">
+          {ICON_DATA_TECH.map((item, index) => (
+            <Icon
+              src={item.src}
+              alt={item.alt}
+              className={item.className}
+              key={index}
+            />
+          ))}
         </div>
       </div>
     </section>

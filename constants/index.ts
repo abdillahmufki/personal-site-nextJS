@@ -125,3 +125,36 @@ export const PEOPLE_URL = [
   "/person-3.png",
   "/person-4.png",
 ];
+
+export const ICON_DATA_TECH = [
+  {
+    src: "/icon/html.svg",
+    alt: "HTML",
+
+    className: "animate-bounce",
+  },
+  {
+    src: "/icon/css.svg",
+    alt: "CSS",
+
+    className: "animate-bounce",
+  },
+  {
+    src: "/icon/js.svg",
+    alt: "JavaScript",
+
+    className: "animate-bounce",
+  },
+  {
+    src: "/icon/react.svg",
+    alt: "React",
+
+    className: "lg:animate-spin animate-bounce",
+  },
+  {
+    src: "/icon/nextjs-solid.svg",
+    alt: "Next.js",
+
+    className: "animate-bounce",
+  },
+];
