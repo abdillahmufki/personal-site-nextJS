@@ -8,7 +8,7 @@ const About = () => {
   ];
   return (
     <section id="about" className="relative my-16 p-5">
-      <div className="text-center grid grid-cols-1 lg:mb-16">
+      <div className="text-center grid grid-cols-1 lg:mb-16 mb-5">
         <h1 className="lg:text-4xl text-2xl text-gray-20 font-semibold">
           About Me
         </h1>

@@ -117,6 +117,12 @@ export const ICON_HERO = [
     src: "/icon/instagram.svg",
     alt: "Picture of the author",
   },
+  {
+    href: "https://linktr.ee/abdillahmufki",
+    title: "Linktree",
+    src: "/icon/linktree.svg",
+    alt: "Picture of the author",
+  },
 ];
 
 export const PEOPLE_URL = [
@@ -154,6 +160,12 @@ export const ICON_DATA_TECH = [
   {
     src: "/icon/nextjs-solid.svg",
     alt: "Next.js",
+
+    className: "animate-bounce",
+  },
+  {
+    src: "/icon/tailwindcss.svg",
+    alt: "Tailwind CSS",
 
     className: "animate-bounce",
   },
