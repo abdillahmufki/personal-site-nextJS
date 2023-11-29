@@ -3,9 +3,9 @@ import Accordion from "@/components/Accordion";
 
 const Skills = () => {
   return (
-    <div>
+    <section>
       <Accordion />
-    </div>
+    </section>
   );
 };
 

@@ -19,7 +19,7 @@ const Background = ({ backgroundImage, children }: BackgroundProps) => {
 };
 const Hero = () => {
   return (
-    <section className="flex lg:flex-row relative flex-col gap-10 justify-center items-center min-h-screen lg:py-24 p-5">
+    <section className="flex lg:flex-row relative bg-gradient flex-col gap-10 py-24 justify-center items-center min-h-screen lg:py-24 p-5">
       <div className="flex lg:flex-col flex-row gap-5">
         {ICON_HERO.map((item, index) => (
           <Link target="_blank" href={item.href} key={index}>
@@ -35,13 +35,13 @@ const Hero = () => {
       </div>
       <div className="flex lg:flex-row items-center justify-center flex-col-reverse lg:gap-24 gap-5 p-5 lg:mt-10">
         <div className="flex flex-col lg:w-[300px] w-full text-left gap-3">
-          <h1 className="lg:text-  5xl text-3xl font-bold leading-snug tracking-wider text-gray-20">
+          <h1 className="lg:text-  5xl text-3xl font-bold leading-snug tracking-wider text-gray-10">
             Hello, My name is Abdillah Mufki
           </h1>
-          <h2 className="lg:text-xl text-lg font-semibold text-gray-20">
+          <h2 className="lg:text-xl text-lg font-semibold text-gray-10">
             FRONTEND WEB DEVELOPER
           </h2>
-          <p className="text-base text-gray-20">
+          <p className="text-base text-gray-10">
             High level in web design and development knowledge, producing
             quality work.
           </p>
@@ -54,16 +54,59 @@ const Hero = () => {
             />
           </div>
         </div>
-        <Background backgroundImage="bg-bg-img-1">
+        <div className="bg-blue-50 shadow-md w-[16rem] h-[20rem] rounded-full p-5 flex justify-center items-center">
           <Image
-            src="/profileMufki.png"
+            src="/profileMufki.jpg"
             alt="Picture of the author"
             width={200}
             height={200}
-            className="rounded-full"
+            className="rounded-full shadow-md"
+            loading="lazy"
             style={{ width: "250", height: "250" }}
           />
-        </Background>
+        </div>
+        <div className="lg:absolute lg:top-36 flex gap-3 lg:right-[350px]">
+          <Image
+            src="/icon/react.svg"
+            alt="Picture of the author"
+            width={30}
+            height={30}
+            className="lg:animate-spin animate-bounce"
+            style={{ width: "30", height: "30" }}
+          />
+          <Image
+            src="/icon/nextjs-solid.svg"
+            alt="Picture of the author"
+            width={30}
+            height={30}
+            className="animate-bounce"
+            style={{ width: "30", height: "30" }}
+          />
+          <Image
+            src="/icon/css.svg"
+            alt="Picture of the author"
+            width={30}
+            height={30}
+            className="animate-bounce"
+            style={{ width: "30", height: "30" }}
+          />
+          <Image
+            src="/icon/html.svg"
+            alt="Picture of the author"
+            width={30}
+            height={30}
+            className="animate-bounce"
+            style={{ width: "30", height: "30" }}
+          />
+          <Image
+            src="/icon/js.svg"
+            alt="Picture of the author"
+            width={30}
+            height={30}
+            className="animate-bounce"
+            style={{ width: "30", height: "30" }}
+          />
+        </div>
       </div>
     </section>
   );

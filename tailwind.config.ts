@@ -14,7 +14,7 @@ module.exports = {
           95: "#526D82",
         },
         gray: {
-          10: "#EEEEEE",
+          10: "#B6BBC4",
           20: "#6A6D7C",
           30: "#7B7B7B",
           50: "#585858",
@@ -32,7 +32,7 @@ module.exports = {
       },
       backgroundImage: {
         "bg-img-1": "url('/blob.svg')",
-        "bg-img-2": "url('/about.png')",
+        "bg-img-2": "url('/backgrounds/bg2.png')",
         "feature-bg": "url('/feature-bg.png')",
         pattern: "url('/pattern.png')",
         "pattern-2": "url('/pattern-bg.png')",

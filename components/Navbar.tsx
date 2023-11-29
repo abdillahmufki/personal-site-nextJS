@@ -23,7 +23,7 @@ const Navbar = () => {
   }, []);
 
   const navClass = `fixed z-50 lg:px-5  ${
-    isScrolled ? "bg-white z-50 shadow-md" : "bg-white"
+    isScrolled ? "bg-white z-50 shadow-md" : "bg-transparent"
   }`;
 
   return (
@@ -61,17 +61,23 @@ const Navbar = () => {
         </div>
         <Link
           href="/"
-          className="btn btn-ghost text-lg hover:text-black text-gray-20 max-[526px]:hidden me-3">
+          className={`btn btn-ghost text-lg hover:text-black ${
+            isScrolled ? "text-gray-20 scrolled" : "text-white"
+          } max-[526px]:hidden me-3`}>
           Abdillah Mufki Auzan Mubin
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           {NAVBAR_LIST.map((item, index) => (
-            <li key={index} className="text-gray-20">
+            <li
+              key={index}
+              className={`${
+                isScrolled ? "text-gray-20 scrolled" : "text-white"
+              }`}>
               <Link
                 href={item.href}
-                className="hover:font-semibold hover:text-black">
+                className="hover:font-semibold hover:text-gray-20">
                 {item.title}
               </Link>
             </li>

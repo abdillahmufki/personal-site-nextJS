@@ -1,6 +1,5 @@
 import Hero from "@/pages/Hero";
 import About from "@/pages/About";
-import DailyActivity from "@/pages/DailyActivity";
 import Skills from "@/pages/Skills";
 import Qualification from "@/pages/Qualification";
 import Services from "@/pages/Services";
@@ -11,7 +10,6 @@ export default function Home() {
     <>
       <Hero />
       <About />
-      <DailyActivity />
       <Skills />
       <Qualification />
       <Services />
