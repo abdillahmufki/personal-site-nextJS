@@ -67,15 +67,7 @@ const Hero = () => {
         </div>
         <div className="lg:absolute lg:top-36 flex gap-3 lg:right-[350px]">
           <Image
-            src="/icon/react.svg"
-            alt="Picture of the author"
-            width={30}
-            height={30}
-            className="lg:animate-spin animate-bounce"
-            style={{ width: "30", height: "30" }}
-          />
-          <Image
-            src="/icon/nextjs-solid.svg"
+            src="/icon/html.svg"
             alt="Picture of the author"
             width={30}
             height={30}
@@ -91,7 +83,7 @@ const Hero = () => {
             style={{ width: "30", height: "30" }}
           />
           <Image
-            src="/icon/html.svg"
+            src="/icon/js.svg"
             alt="Picture of the author"
             width={30}
             height={30}
@@ -99,7 +91,15 @@ const Hero = () => {
             style={{ width: "30", height: "30" }}
           />
           <Image
-            src="/icon/js.svg"
+            src="/icon/react.svg"
+            alt="Picture of the author"
+            width={30}
+            height={30}
+            className="lg:animate-spin animate-bounce"
+            style={{ width: "30", height: "30" }}
+          />
+          <Image
+            src="/icon/nextjs-solid.svg"
             alt="Picture of the author"
             width={30}
             height={30}

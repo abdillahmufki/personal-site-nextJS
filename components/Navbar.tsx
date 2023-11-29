@@ -22,7 +22,7 @@ const Navbar = () => {
     };
   }, []);
 
-  const navClass = `fixed z-50 lg:px-5 ease-in duration-300 ${
+  const navClass = `fixed z-50 lg:px-5 ease-in ease-out duration-300 ${
     isScrolled ? "bg-white z-50 shadow-md" : "bg-transparent"
   }`;
 
