@@ -65,7 +65,7 @@ const Hero = () => {
             style={{ width: "250", height: "250" }}
           />
         </div>
-        <div className="lg:absolute lg:top-36 flex gap-3 lg:right-[350px]">
+        <div className="flex gap-3 flex-col">
           <Image
             src="/icon/html.svg"
             alt="Picture of the author"
