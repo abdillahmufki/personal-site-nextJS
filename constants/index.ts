@@ -166,7 +166,6 @@ export const ICON_DATA_TECH = [
   {
     src: "/icon/tailwindcss.svg",
     alt: "Tailwind CSS",
-
     className: "animate-bounce",
   },
 ];

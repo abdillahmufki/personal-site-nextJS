@@ -1,3 +1,4 @@
+import React from "react";
 import Hero from "@/pages/Hero";
 import About from "@/pages/About";
 import Skills from "@/pages/Skills";
@@ -7,14 +8,16 @@ import Portfolio from "@/pages/Portfolio";
 import Contact from "@/pages/Contact";
 export default function Home() {
   return (
-    <>
-      <Hero />
-      <About />
-      <Skills />
-      <Qualification />
-      <Services />
-      <Portfolio />
-      <Contact />
-    </>
+    <React.Fragment>
+      <div className="bg-[#fff] dark:bg-slate-900">
+        <Hero />
+        <About />
+        <Skills />
+        <Qualification />
+        <Services />
+        <Portfolio />
+        <Contact />
+      </div>
+    </React.Fragment>
   );
 }

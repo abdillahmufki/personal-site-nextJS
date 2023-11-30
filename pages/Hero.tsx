@@ -39,13 +39,13 @@ const Hero = () => {
       </div>
       <div className="flex lg:flex-row items-center justify-center flex-col-reverse lg:gap-24 gap-5 p-5 lg:mt-10">
         <div className="flex flex-col lg:w-[300px] w-full text-left gap-3">
-          <h1 className="lg:text-  5xl text-3xl font-bold leading-snug tracking-wider text-gray-10">
+          <h1 className="lg:text-  5xl text-3xl font-bold leading-snug tracking-wider text-white">
             Hello, My name is Abdillah Mufki
           </h1>
-          <h2 className="lg:text-xl text-lg font-semibold text-gray-10">
+          <h2 className="lg:text-xl text-lg font-semibold text-white">
             FRONTEND WEB DEVELOPER
           </h2>
-          <p className="text-base text-gray-10">
+          <p className="text-base text-white">
             High level in web design and development knowledge, producing
             quality work.
           </p>
@@ -62,11 +62,11 @@ const Hero = () => {
           <Image
             src="/profileMufki.jpg"
             alt="Picture of the author"
-            width={200}
-            height={200}
+            width={250}
+            height={250}
             className="rounded-full shadow-md"
             loading="lazy"
-            style={{ width: "250", height: "250" }}
+            style={{ width: "auto", height: "auto" }}
           />
         </div>
         <div className="flex gap-3 lg:flex-col flex-row">

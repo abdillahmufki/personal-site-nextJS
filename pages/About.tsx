@@ -9,12 +9,12 @@ const About = () => {
   return (
     <section id="about" className="relative my-16 p-5">
       <div className="text-center grid grid-cols-1 lg:mb-16 mb-5">
-        <h1 className="lg:text-4xl text-2xl text-gray-20 font-semibold">
+        <h1 className="lg:text-4xl text-2xl text-gray-20 dark:text-white font-semibold">
           About Me
         </h1>
-        <p className="text-gray-30">My Introduction</p>
+        <p className="text-gray-30 dark:text-white">My Introduction</p>
       </div>
-      <div className="flex flex-row justify-center gap-10">
+      <div className="flex flex-row justify-center gap-10 ">
         <div className="w-[720px] flex flex-col justify-center gap-10">
           <div className="flex flex-col items-center gap-5">
             <div>
@@ -27,7 +27,7 @@ const About = () => {
               />
             </div>
             <div className="lg:w-2/3">
-              <p className="lg:text-left text-center text-gray-20">
+              <p className="lg:text-left text-center text-gray-20 dark:text-white">
                 Web developer with extensive knowledge and years of experience,
                 working in web technologies and UI/UX design, delivering quality
                 work.
