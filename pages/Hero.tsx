@@ -74,7 +74,7 @@ const Hero = () => {
             <Icon
               src={item.src}
               alt={item.alt}
-              className={item.className}
+              className="animate-bounce"
               key={index}
             />
           ))}
