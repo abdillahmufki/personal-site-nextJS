@@ -2,8 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { NAVBAR_LIST } from "@/constants";
 import Link from "next/link";
-import ToogleDarkMode from "./ToogleDarkMode";
-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -55,9 +53,6 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-            <li className="mx-2">
-              <ToogleDarkMode />
-            </li>
           </ul>
         </div>
         <Link
@@ -85,9 +80,6 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <li className="mx-2">
-            <ToogleDarkMode />
-          </li>
         </ul>
       </div>
     </nav>

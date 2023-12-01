@@ -2,7 +2,7 @@ import Tab from "@/components/Tab";
 
 const Portfolio = () => {
   return (
-    <section>
+    <section id="portfolio">
       <div className="flex justify-center items-center">
         <div>
           <Tab />
