@@ -5,6 +5,17 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  daisyui: {
+    themes: [
+      {
+        dark: {
+          ...require("daisyui/src/theming/themes")["[data-theme=dark]"],
+          primary: "#6A6D7C",
+          "primary-focus": "#fff !important",
+        },
+      },
+    ],
+  },
   darkMode: ["class"],
   theme: {
     extend: {

@@ -169,3 +169,36 @@ export const ICON_DATA_TECH = [
     className: "animate-bounce",
   },
 ];
+
+// data.ts
+export interface Progress {
+  title: string;
+  value: number;
+}
+
+export const PROGRESS_VALUES_FRONTEND: Progress[] = [
+  { title: "HTML", value: 85 },
+  { title: "CSS", value: 80 },
+  { title: "JavaScript", value: 75 },
+  { title: "ReactJS", value: 75 },
+  { title: "Bootstrap", value: 85 },
+  { title: "Tailwind", value: 80 },
+];
+
+export const PROGRESS_VALUES_BACKEND: Progress[] = [
+  { title: "NodeJS", value: 60 },
+  { title: "Express", value: 50 },
+  { title: "MongoDB", value: 50 },
+  { title: "MySQL", value: 50 },
+];
+
+export const PROGRESS_VALUES_DESIGNER: Progress[] = [
+  { title: "Figma", value: 80 },
+  { title: "Canva", value: 85 },
+];
+
+export const ACCORDION_DATA = [
+  { title: "Frontend developer", progressValues: PROGRESS_VALUES_FRONTEND },
+  { title: "Backend developer", progressValues: PROGRESS_VALUES_BACKEND },
+  { title: "Designer", progressValues: PROGRESS_VALUES_DESIGNER },
+];

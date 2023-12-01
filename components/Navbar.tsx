@@ -55,7 +55,7 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-            <li>
+            <li className="mx-2">
               <ToogleDarkMode />
             </li>
           </ul>
@@ -85,7 +85,7 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <li>
+          <li className="mx-2">
             <ToogleDarkMode />
           </li>
         </ul>

@@ -1,7 +1,15 @@
-import React from "react";
+import Tab from "@/components/Tab";
 
 const Portfolio = () => {
-  return <section>Portfolio</section>;
+  return (
+    <section>
+      <div className="flex justify-center items-center">
+        <div>
+          <Tab />
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Portfolio;

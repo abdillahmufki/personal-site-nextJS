@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/app/theme-provider";
-import ToogleDarkMode from "@/components/ToogleDarkMode";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
