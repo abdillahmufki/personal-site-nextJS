@@ -68,7 +68,7 @@ const Modal: React.FC<ModalProps> = ({ title, content, buttonLabel }) => {
           </ul>
           <div className="modal-action">
             <button
-              className="btn bg-bluetext-blue-50 text-[#fff] border-none hover:bg-[#526D82]"
+              className="btn bg-bluetext-blue-50 text-[#fff] border-none bg-blue-50 hover:bg-gray-20"
               onClick={handleCloseModal}>
               Close
             </button>
