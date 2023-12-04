@@ -85,16 +85,14 @@ const Contact: React.FC = () => {
   );
 
   return (
-    <div
-      className="lg:min-h-screen mt-[100px] max-[600px]:my-[75px]"
-      id="contact">
+    <div className="lg:min-h-screen py-10 p-5" id="contact">
       <div className="my-10 text-center text-[#526D82]">
         <h1 className="mt-12 text-4xl font-bold">Contact Me</h1>
         <p className="text-sm">Get in touch</p>
       </div>
       <div>
         <form
-          className="flex flex-col items-center"
+          className="flex flex-col items-center p-5"
           onSubmit={customHandleSubmit}>
           {[
             { name: "name", type: "text", placeholder: "Name" },
