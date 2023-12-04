@@ -3,7 +3,7 @@ import Accordion from "@/components/Accordion";
 
 const Skills = () => {
   return (
-    <section>
+    <section id="skills">
       <div className="flex justify-center flex-col items-center">
         <h1 className="text-4xl font-semibold text-gray-20 dark:text-white">
           SKILLS{" "}
