@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import Application from "./Portfolio/Application";
-import Desain from "./Portfolio/Desain";
+import Design from "./Portfolio/Design";
 import Website from "./Portfolio/Website";
 
 const Tab: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<number>(1); // Initially, Tab 2 is active
+  const [activeTab, setActiveTab] = useState<number>(0); // Initially, Tab 2 is active
 
   const handleTabClick = (index: number) => {
     setActiveTab(index);
@@ -18,7 +18,7 @@ const Tab: React.FC = () => {
       case 1:
         return <Application />;
       case 2:
-        return <Desain />;
+        return <Design />;
       default:
         return null;
     }

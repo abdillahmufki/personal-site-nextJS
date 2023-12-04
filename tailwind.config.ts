@@ -8,10 +8,15 @@ module.exports = {
   daisyui: {
     themes: [
       {
+        light: {
+          ...require("daisyui/src/theming/themes")["[data-theme=light]"],
+          primary: "#6A6D7C",
+          "primary-focus": "#fff !important",
+        },
         dark: {
           ...require("daisyui/src/theming/themes")["[data-theme=dark]"],
           primary: "#6A6D7C",
-          "primary-focus": "#fff !important",
+          "primary-focus": "#fff",
         },
       },
     ],

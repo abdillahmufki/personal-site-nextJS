@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Pagination from "../Pagination";
 
-import { PROJECT_DATA_WEBSITE } from "@/constants";
+import { PROJECT_DATA_DESIGN } from "@/constants";
 
 interface Product {
   title: string;
@@ -13,19 +13,19 @@ interface Product {
   src: string;
 }
 
-const Website: React.FC = () => {
+const Design: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1); // Track current page
   const itemsPerPage: number = 6; // Number of items per page
 
   // Get data for the current page
-  const paginatedData: Product[] = PROJECT_DATA_WEBSITE.slice(
+  const paginatedData: Product[] = PROJECT_DATA_DESIGN.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
 
   // Calculate total pages
   const totalPages: number = Math.ceil(
-    PROJECT_DATA_WEBSITE.length / itemsPerPage
+    PROJECT_DATA_DESIGN.length / itemsPerPage
   );
 
   const handlePageChange = (page: number): void => {
@@ -81,4 +81,4 @@ const Website: React.FC = () => {
   );
 };
 
-export default Website;
+export default Design;

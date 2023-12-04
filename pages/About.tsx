@@ -33,12 +33,12 @@ const About = () => {
                 work.
               </p>
             </div>
-            <div className="flex justify-between lg:flex-row flex-col lg:gap-20 gap-2 bg-white shadow-md rounded-md">
+            <div className="flex justify-between lg:flex-row flex-col lg:gap-20 gap-2 dark:bg-gray-10 shadow-md rounded-md">
               {items.map((item, index) => (
                 <div key={index} className="mx-4 my-4 text-center md:my-0">
                   <div className="stat">
-                    <h2 className="stat-desc text-gray-20">
-                      <span className="text-3xl font-bold stat-value text-blue-50">
+                    <h2 className="stat-desc text-blue-50 dark:text-white">
+                      <span className="text-3xl font-bold stat-value ">
                         {item.value}
                       </span>
                       <br /> {item.label}

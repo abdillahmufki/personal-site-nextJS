@@ -40,7 +40,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
 
   return (
     <div
-      className={`collapse collapse-arrow join-item border-none  my-5 ${
+      className={`collapse collapse-arrow dark:bg-gray-10 bg-white join-item border-none my-3 ${
         isActive ? "open" : ""
       }`}>
       <input
@@ -80,17 +80,19 @@ const Accordion: React.FC = () => {
   };
 
   return (
-    <div className="min-w-full p-5 lg:px-28">
-      {ACCORDION_DATA.map((item, index) => (
-        <AccordionItem
-          key={index}
-          index={index}
-          activeIndex={activeIndex}
-          handleAccordionClick={handleAccordionClick}
-          title={item.title}
-          progressValues={item.progressValues}
-        />
-      ))}
+    <div className="flex justify-center">
+      <div className="lg:w-[70%] min-h-full p-5 lg:px-28">
+        {ACCORDION_DATA.map((item, index) => (
+          <AccordionItem
+            key={index}
+            index={index}
+            activeIndex={activeIndex}
+            handleAccordionClick={handleAccordionClick}
+            title={item.title}
+            progressValues={item.progressValues}
+          />
+        ))}
+      </div>
     </div>
   );
 };
