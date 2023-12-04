@@ -18,8 +18,8 @@ const InputField: React.FC<InputFieldProps> = ({
   error,
 }) => (
   <input
-    className={`bg-[#f5f5f5] text-black border ${
-      error ? "border-red-500" : "border-none"
+    className={`bg-[#fff]  text-black border ${
+      error ? "border-red-600 placeholder-red-500" : "border-none"
     } rounded-md w-full max-w-[500px] h-[40px] px-4 my-3 outline-none`}
     type={type}
     name={name}

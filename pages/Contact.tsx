@@ -5,6 +5,7 @@ import TextAreaField from "@/components/TextAreaField";
 import { useForm } from "@formspree/react";
 
 interface FormData {
+  input: any;
   name: string;
   email: string;
   phoneNumber: string;
@@ -21,6 +22,7 @@ const Contact: React.FC = () => {
     email: "",
     phoneNumber: "",
     message: "",
+    input: "",
   });
 
   const [errors, setErrors] = useState<Errors>({
@@ -34,7 +36,7 @@ const Contact: React.FC = () => {
       const { name, value } = e.target;
       setFormData((prevData) => ({
         ...prevData,
-        [name as keyof FormData]: value,
+        [name]: value,
       }));
     },
     []
@@ -104,7 +106,7 @@ const Contact: React.FC = () => {
               name={input.name}
               type={input.type}
               placeholder={input.placeholder}
-              value={formData[input.name]}
+              value={formData.input.name}
               onChange={handleInputChange}
               error={errors[input.name]}
             />
@@ -154,7 +156,7 @@ const Contact: React.FC = () => {
             </div>
           ) : (
             <button
-              className="btn bg-[#32729E] text-white hover:bg-[#526D82] w-full max-w-[500px] h-[40px] my-3 border-none"
+              className="btn bg-blue-50 text-white hover:bg-[#526D82] w-full max-w-[500px] h-[40px] my-3 border-none"
               type="submit"
               disabled={state && state.submitting}>
               Send
