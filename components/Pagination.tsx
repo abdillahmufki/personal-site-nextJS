@@ -24,7 +24,7 @@ const Pagination: React.FC<PaginationProps> = ({
         key={page + 1}
         onClick={() => onPageChange(page + 1)}
         className={`join-item btn ${currentPage === page + 1 ? "active" : ""}`}>
-        Page {page + 1}
+        {page + 1}
       </button>
     ))}
     <button

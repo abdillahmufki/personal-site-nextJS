@@ -13,7 +13,7 @@ export const PROJECT_DATA_WEBSITE = [
     title: "Frontend Digital CV",
     description:
       "Online job portal website application that connects talented professionals like you with exciting career opportunities. Developed using a robust HTML, CSS, JavaScript, Bootstrap and jQuery stack, DigitalCV offers a seamless and easy-to-use experience for job seekers and employers alike.",
-    src: "/project/digitalcv.png",
+    src: "/project/DigitalCv.webp",
     link: "https://digitalcv.id/id/candidate/index.php",
   },
   {
@@ -21,7 +21,7 @@ export const PROJECT_DATA_WEBSITE = [
     title: "Company Profile Gestalt Systech",
     description:
       "I am very proud to display my skills as a developer specializing in creating captivating company profiles for software houses and IT consulting firms. One of my notable projects involved collaborating with Gestalt Systech, a leading name in the industry, to develop a stunning company profile using React.js and Tailwind CSS.",
-    src: "/project/gs.png",
+    src: "/project/GestaltSystech.webp",
     link: "https://gestaltsystech.vercel.app/",
   },
   {
@@ -29,7 +29,7 @@ export const PROJECT_DATA_WEBSITE = [
     title: "GPT-3 Clone ReactJS",
     description:
       "GPT-3 is a clone of OpenAI, this project is a learning media javscript library for creating compnent based user intefaces, using ReactJS",
-    src: "/project/reactProject1.png",
+    src: "/project/gpt3.webp",
     link: "https://github.com/abdillahmufki/Modern-UI-UX-Website-in-React-JS",
   },
   {
@@ -37,7 +37,7 @@ export const PROJECT_DATA_WEBSITE = [
     title: "Company Profile PT. Buana Selaras Berjaya",
     description:
       "Our impressive company profile project utilizes the power of React.js and Tailwind CSS to create a captivating online presence for your business. With a sleek design, responsive layout, and seamless functionality, this project showcases your company's strengths and offerings in a modern and engaging way.",
-    src: "/project/bsb.png",
+    src: "/project/Bsb.webp",
     link: "http://buanaselarasberjaya.com/",
   },
   {
@@ -72,7 +72,7 @@ export const PROJECT_DATA_APPLICATION = [
     title: "Mobile Apps Find Job",
     description:
       "This innovative solution combines a user-friendly interface with seamless functionality, offering a modern platform for those seeking their dream career. Explore my portfolio to see how React Native Expo is driving the development of dynamic job search apps, making a big impact in mobile development.",
-    src: "/project/kuyTravel.png",
+    src: "/project/mobileReactNative.png",
     link: "https://github.com/abdillahmufki/Job_Portal_RN",
   },
 ];
@@ -82,7 +82,7 @@ export const PROJECT_DATA_DESIGN = [
     id: 1,
     title: "User Interface HealingKuy",
     description: "UI about booking a place to stay using Figma.",
-    src: "/project/project1.png",
+    src: "/project/HealingKuyWeb.webp",
     link: "https://www.figma.com/file/oQblEaGpy4ncgr6nNy2u9O/Staycation?type=design&node-id=0%3A1&mode=design&t=AvzRJYbMGD2a8ses-1",
   },
   {

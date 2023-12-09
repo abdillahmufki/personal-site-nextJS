@@ -48,7 +48,7 @@ const Website: React.FC = () => {
                   <Image
                     width={350}
                     height={300}
-                    className="w-[350px] h-[180px]"
+                    className="w-[350px] h-[350px]"
                     alt="img"
                     src={product.src}
                   />
