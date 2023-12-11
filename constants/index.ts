@@ -37,7 +37,7 @@ export const PROJECT_DATA_WEBSITE = [
     title: "Company Profile PT. Buana Selaras Berjaya",
     description:
       "Our impressive company profile project utilizes the power of React.js and Tailwind CSS to create a captivating online presence for your business. With a sleek design, responsive layout, and seamless functionality, this project showcases your company's strengths and offerings in a modern and engaging way.",
-    src: "/project/Bsb.webp",
+    src: "/project/Bsb.png",
     link: "http://buanaselarasberjaya.com/",
   },
   {
