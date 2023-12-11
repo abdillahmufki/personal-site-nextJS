@@ -4,7 +4,7 @@ export const PROJECT_DATA_WEBSITE = [
     title: "Web KuyTravel",
     description:
       "The KuyTravel website is a modern, responsive and feature-rich website. This website was built using modern and latest technologies such as NextJs, TypeScript, Tailwind.",
-    src: "/project/kuyTravel.png",
+    src: "/project/kuyTravel.jpg",
     link: "https://kuy-travel.vercel.app/",
   },
 
@@ -21,7 +21,7 @@ export const PROJECT_DATA_WEBSITE = [
     title: "Company Profile Gestalt Systech",
     description:
       "I am very proud to display my skills as a developer specializing in creating captivating company profiles for software houses and IT consulting firms. One of my notable projects involved collaborating with Gestalt Systech, a leading name in the industry, to develop a stunning company profile using React.js and Tailwind CSS.",
-    src: "/project/GestaltSystech.webp",
+    src: "/project/GestaltSystech.png",
     link: "https://gestaltsystech.vercel.app/",
   },
   {

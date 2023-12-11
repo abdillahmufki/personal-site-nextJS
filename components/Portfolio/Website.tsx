@@ -40,7 +40,7 @@ const Website: React.FC = () => {
         {paginatedData.map((product: Product, index: number) => (
           <Link href={product.link} target="_blank" key={index}>
             <div className="group relative block overflow-hidden rounded-md transition-all duration-500">
-              <div className="lightbox tobii-zoom transition-all duration-500  shadow-md group-hover:opacity-40 group-hover:scale-105">
+              <div className="lightbox tobii-zoom transition-all duration-500  shadow-md group-hover:opacity-40">
                 <Image
                   width={350}
                   height={300}
