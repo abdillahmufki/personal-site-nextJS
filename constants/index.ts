@@ -4,7 +4,7 @@ export const PROJECT_DATA_WEBSITE = [
     title: "Web KuyTravel",
     description:
       "The KuyTravel website is a modern, responsive and feature-rich website. This website was built using modern and latest technologies such as NextJs, TypeScript, Tailwind.",
-    src: "/project/kuyTravel.png",
+    src: "/project/KuyTravel.png",
     link: "https://kuy-travel.vercel.app/",
   },
 
