@@ -13,7 +13,7 @@ export const PROJECT_DATA_WEBSITE = [
     title: "Frontend Digital CV",
     description:
       "Online job portal website application that connects talented professionals like you with exciting career opportunities. Developed using a robust HTML, CSS, JavaScript, Bootstrap and jQuery stack, DigitalCV offers a seamless and easy-to-use experience for job seekers and employers alike.",
-    src: "/project/DigitalCv.webp",
+    src: "/project/DigitalCv.png",
     link: "https://digitalcv.id/id/candidate/index.php",
   },
   {
