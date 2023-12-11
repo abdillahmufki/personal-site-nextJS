@@ -6,7 +6,7 @@ import Pagination from "../Pagination";
 
 import { PROJECT_DATA_WEBSITE } from "@/constants";
 
-interface Product {
+interface Projects {
   title: string;
   description: string;
   link: string;
@@ -18,7 +18,7 @@ const Website: React.FC = () => {
   const itemsPerPage: number = 6; // Number of items per page
 
   // Get data for the current page
-  const paginatedData: Product[] = PROJECT_DATA_WEBSITE.slice(
+  const paginatedData: Projects[] = PROJECT_DATA_WEBSITE.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
@@ -37,8 +37,8 @@ const Website: React.FC = () => {
   return (
     <div className="my-10 flex justify-center flex-col lg:my-10 p-5">
       <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
-        {paginatedData.map((product: Product, index: number) => (
-          <Link href={product.link} target="_blank" key={index}>
+        {paginatedData.map((project: Projects, index: number) => (
+          <Link href={project.link} target="_blank" key={index}>
             <div className="group relative block overflow-hidden rounded-md transition-all duration-500">
               <div className="lightbox tobii-zoom transition-all duration-500  shadow-md group-hover:opacity-40">
                 <Image
@@ -46,12 +46,12 @@ const Website: React.FC = () => {
                   height={300}
                   className="w-[350px] h-[350px]"
                   alt="img"
-                  src={product.src}
+                  src={project.src}
                 />
               </div>
               <div className="absolute -bottom-52 left-2 right-2 rounded p-4 transition-all duration-500 group-hover:bottom-2 bg-transparent">
                 <p className="hover:text-primary-600 text-white dark:white text-lg font-medium transition duration-500">
-                  {product.title}
+                  {project.title}
                 </p>
                 <div className="badge badge-primary">
                   <p>Website</p>

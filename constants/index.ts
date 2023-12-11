@@ -33,7 +33,7 @@ export const PROJECT_DATA_WEBSITE = [
     link: "https://github.com/abdillahmufki/Modern-UI-UX-Website-in-React-JS",
   },
   {
-    id: 5,
+    id: 6,
     title: "Company Profile PT. Buana Selaras Berjaya",
     description:
       "Our impressive company profile project utilizes the power of React.js and Tailwind CSS to create a captivating online presence for your business. With a sleek design, responsive layout, and seamless functionality, this project showcases your company's strengths and offerings in a modern and engaging way.",
@@ -41,7 +41,7 @@ export const PROJECT_DATA_WEBSITE = [
     link: "http://buanaselarasberjaya.com/",
   },
   {
-    id: 6,
+    id: 7,
     title: "KuyNgemils",
     description:
       "Built using the powerful React.js technology, KuyNgemils offers fast and responsive performance. You can explore the various available food menus smoothly, view food details, set personal preferences, and track orders easily. In addition, with an attractive and intuitive design, this application provides a pleasing user experience that pleases your eyes.",
