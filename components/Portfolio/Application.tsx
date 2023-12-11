@@ -48,7 +48,7 @@ const Application: React.FC = () => {
                   <Image
                     width={350}
                     height={350}
-                    className="w-[350px] h-[350px]"
+                    className="lg:w-[350px] lg:h-[350px] max-[500px]:w-auto max-[500px]:h-auto"
                     alt="img"
                     src={product.src}
                   />

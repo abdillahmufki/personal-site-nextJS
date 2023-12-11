@@ -47,8 +47,8 @@ const Design: React.FC = () => {
                   className="lightbox tobii-zoom transition-all duration-500  shadow-md group-hover:brightness-50 group-hover:scale-105">
                   <Image
                     width={350}
-                    height={300}
-                    className="w-[350px] h-[350px]"
+                    height={350}
+                    className="lg:w-[350px] lg:h-[350px] max-[500px]:w-auto max-[500px]:h-auto"
                     alt="img"
                     src={product.src}
                   />
