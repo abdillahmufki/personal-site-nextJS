@@ -29,7 +29,7 @@ export const PROJECT_DATA_WEBSITE = [
     title: "GPT-3 Clone ReactJS",
     description:
       "GPT-3 is a clone of OpenAI, this project is a learning media javscript library for creating compnent based user intefaces, using ReactJS",
-    src: "/project/gpt3.webp",
+    src: "/project/gpt3.png",
     link: "https://github.com/abdillahmufki/Modern-UI-UX-Website-in-React-JS",
   },
   {
@@ -82,7 +82,7 @@ export const PROJECT_DATA_DESIGN = [
     id: 1,
     title: "User Interface HealingKuy",
     description: "UI about booking a place to stay using Figma.",
-    src: "/project/HealingKuyWeb.webp",
+    src: "/project/HealingKuyWeb.png",
     link: "https://www.figma.com/file/oQblEaGpy4ncgr6nNy2u9O/Staycation?type=design&node-id=0%3A1&mode=design&t=AvzRJYbMGD2a8ses-1",
   },
   {
