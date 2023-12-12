@@ -22,6 +22,7 @@ const Card: React.FC<CardProps> = (props) => {
                   alt={props.title}
                   width={35}
                   height={35}
+                  className="w-[35px] h-[35px]"
                 />
               </div>
               <h3 className="text-2xl max-[600px]:text-lg font-semibold my-5 text-blue-50 dark:text-white">

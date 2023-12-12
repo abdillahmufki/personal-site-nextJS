@@ -49,14 +49,14 @@ const Hero = () => {
             High level in web design and development knowledge, producing
             quality work.
           </p>
-          <div>
+          <Link href="#contact">
             <Button
               type="button"
               title="Contact Me"
               variant="btn_dark_blue"
               icon="/icon/contact.svg"
             />
-          </div>
+          </Link>
         </div>
         <div className="bg-blue-50 shadow-md w-[16rem] h-[20rem] rounded-full p-5 flex justify-center items-center">
           <Image

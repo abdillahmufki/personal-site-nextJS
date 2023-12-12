@@ -50,7 +50,7 @@ const Application: React.FC = () => {
                 />
               </div>
               <div className="absolute -bottom-52 left-2 right-2 rounded p-4 transition-all duration-500 group-hover:bottom-2 bg-transparent">
-                <p className="hover:text-primary-600 text-white dark:white text-lg font-medium transition duration-500">
+                <p className="hover:text-primary-600 text-gray-90 dark:text-white dark:white text-lg font-medium transition duration-500">
                   {project.title}
                 </p>
                 <div className="badge badge-primary">
@@ -63,7 +63,6 @@ const Application: React.FC = () => {
       </div>
 
       <div className="flex justify-center my-10">
-        {/* Use the Pagination component */}
         <Pagination
           totalPages={totalPages}
           currentPage={currentPage}
