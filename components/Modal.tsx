@@ -61,6 +61,7 @@ const Modal: React.FC<ModalProps> = ({ title, content, buttonLabel }) => {
                   alt="icon"
                   width={15}
                   height={15}
+                  className="w-auto h-auto"
                 />
                 {item}
               </li>
