@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { NAVBAR_LIST } from "@/constants";
 import Link from "next/link";
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 

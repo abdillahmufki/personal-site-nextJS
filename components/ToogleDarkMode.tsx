@@ -18,14 +18,14 @@ const ToggleDarkMode = () => {
 
   return (
     <button
-      className={`w-fit p-2 rounded-full hover:scale-110 active:scale-100 duration-200 bg-gray-20 text-gray-10 `}
+      className={`w-fit p-3 rounded-full hover:scale-110 active:scale-100 duration-200 bg-gray-20 text-gray-10 `}
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label={toggleButtonText}>
       {theme === "dark" ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
+          width="25"
+          height="25"
           viewBox="0 0 256 256">
           <path
             fill="#fff"
@@ -35,8 +35,8 @@ const ToggleDarkMode = () => {
       ) : (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
+          width="25"
+          height="25"
           viewBox="0 0 256 256">
           <path
             fill="#fff"
