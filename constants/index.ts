@@ -102,6 +102,7 @@ export const NAVBAR_LIST = [
   { title: "Qualification", href: "#qualification" },
   { title: "Services", href: "#services" },
   { title: "Portfolio", href: "#portfolio" },
+  { title: "Blog", href: "#blog" },
   { title: "Contact", href: "#contact" },
 ];
 
