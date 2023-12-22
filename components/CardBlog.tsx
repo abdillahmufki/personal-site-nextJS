@@ -27,7 +27,7 @@ const CardBlog = ({ title, overview, src, alt, href, time }: DataCard) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
-        <p>{overview}</p>
+        <p className="line-clamp-2">{overview}</p>
         <p>{time}</p>
         <Link href={href} className="card-actions justify-end">
           <button className="btn btn-primary">Read More</button>
