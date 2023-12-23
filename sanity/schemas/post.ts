@@ -4,11 +4,6 @@ export default {
   title: 'Post',
   fields: [
     {
-      name: 'image',
-      type: 'image',
-      title: 'Image',
-    },
-    {
       name: 'title',
       type: 'string',
       title: 'Title',
@@ -27,6 +22,14 @@ export default {
       },
     },
     {
+      name: 'image',
+      title: 'Main image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'content',
       type: 'array',
       of: [
@@ -40,38 +43,14 @@ export default {
               title: 'File',
               type: 'file',
               options: {
-                accept: 'application/pdf', // Specify the accepted file type(s)
+                accept: 'application/pdf',
               },
             },
           ],
         },
         {
-          name: 'htmlCode',
-          title: 'HTML Code',
-          type: 'object',
-          fields: [
-            {
-              name: 'code',
-              title: 'Code',
-              type: 'text',
-            },
-          ],
-        },
-        {
-          name: 'jsCode',
-          title: 'JavaScript Code',
-          type: 'object',
-          fields: [
-            {
-              name: 'code',
-              title: 'Code',
-              type: 'text',
-            },
-          ],
-        },
-        {
-          name: 'phpCode',
-          title: 'PHP Code',
+          name: 'codeBlock',
+          title: 'Code Block',
           type: 'object',
           fields: [
             {

@@ -29,7 +29,7 @@ export default async function BlogPost({
     },
   };
   return (
-    <div className="min-h-screen">
+    <article className="min-h-screen">
       <div className="divide-y flex pt-28 w-full justify-center flex-col bg-white dark:bg-slate-500 text-black">
         <header className="flex justify-center w-full border-b-2 border-blue-50 pb-4">
           <div className="space-y-1 text-center">
@@ -60,6 +60,6 @@ export default async function BlogPost({
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
