@@ -9,25 +9,41 @@ async function getData(slug: string) {
   return data;
 }
 
+const MyCodeFieldComponent = ({ value }: { value: any }) => {
+  return (
+    <pre>
+      <code>{value.code}</code>
+    </pre>
+  );
+};
+
+const PortableTextComponent = {
+  types: {
+    image: ({ value }: { value: any }) => (
+      <img
+        src={urlFor(value).url()}
+        alt="Image"
+        width={600}
+        height={300}
+        className="rounded-lg w-max h-max"
+      />
+    ),
+    code: ({ value }: { value: any }) => (
+      <pre>
+        <code>{value.code}</code>
+      </pre>
+    ),
+    myCodeField: MyCodeFieldComponent,
+  },
+};
+
 export default async function BlogPost({
   params,
 }: {
   params: { slug: string };
 }) {
   const data = (await getData(params.slug)) as Post;
-  const PortableTextComponent = {
-    types: {
-      image: ({ value }: { value: any }) => (
-        <img
-          src={urlFor(value).url()}
-          alt="Image"
-          width={600}
-          height={300}
-          className="rounded-lg"
-        />
-      ),
-    },
-  };
+
   return (
     <article className="min-h-screen">
       <div className="divide-y flex pt-28 w-full justify-center flex-col bg-white dark:bg-slate-500 text-black">
@@ -40,7 +56,6 @@ export default async function BlogPost({
                 </p>
               </div>
             </div>
-
             <div>
               <h1 className="text-5xl font-bold leading-tight tracking-tight text-gray-900">
                 {data.title}
@@ -48,7 +63,6 @@ export default async function BlogPost({
             </div>
           </div>
         </header>
-
         <div className="divide-y divide-gray-10 dark:divide-gray-20 xl:divide-0">
           <div className="divide-y divide-gray-20 xl:col-span-3 xl:row-span-2 first-letter:">
             <div className="prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg p-10">

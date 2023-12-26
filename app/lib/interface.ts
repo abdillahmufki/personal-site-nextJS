@@ -1,7 +1,8 @@
 export interface Post {
   title: string;
   overview: string;
-  image: string;
+  code: string;
+  image?: string;
   content: any;
   _id: string;
   slug: {

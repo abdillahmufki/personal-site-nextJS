@@ -13,27 +13,34 @@ interface DataCard {
 
 const CardBlog = ({ title, overview, src, alt, href, time }: DataCard) => {
   return (
-    <div className="card w-96 h-full bg-base-100 shadow-xl">
-      <figure>
-        {
-          <Image
-            src={src}
-            width={100}
-            height={100}
-            className="w-full h-full"
-            alt={alt}
-          />
-        }
-      </figure>
-      <div className="card-body">
-        <h2 className="card-title">{title}</h2>
-        <p className="line-clamp-2">{overview}</p>
-        <p>{time}</p>
-        <Link href={href} className="card-actions justify-end">
-          <button className="btn btn-primary">Read More</button>
-        </Link>
-      </div>
-    </div>
+    <>
+      <Link href={href}>
+        <div className="card w-72 h-96 bg-base-100 shadow-xl">
+          <figure>
+            {
+              <Image
+                src={src}
+                width={288}
+                height={164}
+                className="h-[164px] w-[288px]"
+                alt={alt}
+              />
+            }
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title text-lg">{title}</h2>
+            <p className="line-clamp-2 text-sm">{overview}</p>
+            <p className="text-sm">{time}</p>
+            <Link
+              href={href}
+              className="card-actions text-sm flex items-center justify-end hover:text-blue-50">
+              Read More{" "}
+              <Image alt="icon" src="/icon/arrow.svg" width={20} height={20} />
+            </Link>
+          </div>
+        </div>
+      </Link>
+    </>
   );
 };
 

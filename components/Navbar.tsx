@@ -22,13 +22,12 @@ const Navbar = () => {
     };
   }, []);
 
-  const navClass = "fixed z-50 lg:px-5 ease-in ease-out duration-300";
-  `fixed z-50 lg:px-5 ease-in ease-out duration-300 ${
+  const navClass = `fixed z-50 lg:px-5 ease-in ease-out duration-300 ${
     isScrolled ? "dark:bg-slate-900 bg-white z-50 shadow-md" : "bg-transparent"
   }`;
 
   return (
-    <nav className={`navbar bg-[#000] fixed z-50`}>
+    <nav className={`navbar ${navClass}`}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -59,7 +58,7 @@ const Navbar = () => {
         </div>
         <Link
           href="/"
-          className={`btn btn-ghost text-lg hover:text-black ${
+          className={`btn btn-ghost text-lg hover:text-gray-10 ${
             isScrolled ? "text-gray-20 scrolled dark:text-white" : "text-white"
           } max-[526px]:hidden me-3`}>
           Abdillah Mufki Auzan Mubin
@@ -77,7 +76,7 @@ const Navbar = () => {
               }`}>
               <Link
                 href={item.href}
-                className="hover:font-semibold hover:text-gray-20">
+                className="hover:font-semibold hover:text-gray-10">
                 {item.title}
               </Link>
             </li>

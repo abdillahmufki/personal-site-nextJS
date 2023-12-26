@@ -30,7 +30,7 @@ export default async function Blog() {
               key={post._id}
               title={post.title}
               overview={post.overview}
-              src={urlFor(post.image).url()} // Use urlFor to build the image URL
+              src={urlFor(post.image).url()}
               alt={post.title}
               href={`/post/${post.slug.current}`}
               time={new Date(post._createdAt).toLocaleDateString()}
