@@ -1,7 +1,16 @@
-export default {
+import {defineField, defineType} from 'sanity'
+
+export default defineType({
   name: 'post',
   type: 'document',
   title: 'Post',
+  fieldsets: [
+    {
+      name: 'default',
+      title: 'Default',
+      options: {collapsible: true, collapsed: true},
+    },
+  ],
   fields: [
     {
       name: 'title',
@@ -48,19 +57,22 @@ export default {
             },
           ],
         },
-        {
-          name: 'codeBlock',
-          title: 'Code Block',
-          type: 'object',
-          fields: [
-            {
-              name: 'code',
-              title: 'Code',
-              type: 'text',
-            },
-          ],
-        },
+        defineField({
+          name: 'code',
+          title: 'Code with all options',
+          type: 'code',
+          options: {
+            theme: 'solarized_dark',
+            language: 'javascript',
+            languageAlternatives: [
+              {title: 'Javascript', value: 'javascript'},
+              {title: 'HTML', value: 'html'},
+              {title: 'CSS', value: 'css'},
+            ],
+            withFilename: true,
+          },
+        }),
       ],
     },
   ],
-}
+})
