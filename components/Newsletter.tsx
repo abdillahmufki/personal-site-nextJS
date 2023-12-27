@@ -13,14 +13,7 @@ const Newsletter = () => {
           Mau dapat tips belajar coding, info teknologi, dan perkembangan karir
           sebagai programmer?
         </p>
-        <Button
-          type="button"
-          full
-          icons={faEnvelope}
-          title="Subscribe"
-          i18nIsDynamicList
-          key=""
-        />
+        <Button type="button" icons={faEnvelope} title="Subscribe" />
       </div>
     </div>
   );
