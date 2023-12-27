@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface DataCard {
-  title?: string;
+  title: string;
   overview: string;
   src: string;
   alt: string;

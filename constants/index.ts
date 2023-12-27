@@ -1,3 +1,9 @@
+import {
+  faInstagram,
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+
 export const PROJECT_DATA_WEBSITE = [
   {
     id: 1,
@@ -96,7 +102,7 @@ export const PROJECT_DATA_DESIGN = [
 ];
 
 export const NAVBAR_LIST = [
-  { title: "Home", href: "#home" },
+  { title: "Home", href: "/" },
   { title: "About", href: "#about" },
   { title: "Skills", href: "#skills" },
   { title: "Qualification", href: "#qualification" },
@@ -109,27 +115,18 @@ export const NAVBAR_LIST = [
 export const ICON_HERO = [
   {
     href: "https://www.linkedin.com/in/abdillah-mufki-auzan-mubin-55a873212/",
-    title: "LinkedIn",
-    src: "/icon/linkedin.svg",
-    alt: "Picture of the author",
+
+    icon: faLinkedin,
   },
   {
     href: "https://github.com/abdillahmufki",
-    title: "Github",
-    src: "/icon/github.svg",
-    alt: "Picture of the author",
+
+    icon: faGithub,
   },
   {
     href: "https://www.instagram.com/mufkimustache/",
-    title: "Instagram",
-    src: "/icon/instagram.svg",
-    alt: "Picture of the author",
-  },
-  {
-    href: "https://linktr.ee/abdillahmufki",
-    title: "Linktree",
-    src: "/icon/linktree.svg",
-    alt: "Picture of the author",
+
+    icon: faInstagram,
   },
 ];
 

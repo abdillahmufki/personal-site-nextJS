@@ -16,7 +16,7 @@ const TextAreaField: React.FC<TextAreaFieldProps> = ({
   error,
 }) => (
   <textarea
-    className={`bg-[#f5f5f5] text-black border ${
+    className={`bg-[#f5f5f5] shadow-sm text-black border ${
       error ? "border-red-600 placeholder-red-500" : "border-none"
     } rounded-md w-full lg:max-w-[500px] h-[120px] px-4 py-3 my-3 outline-none resize-none`}
     name={name}

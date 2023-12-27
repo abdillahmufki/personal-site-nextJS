@@ -10,7 +10,7 @@ import Blog from "@/pages/Blog";
 export default function Home() {
   return (
     <>
-      <div className="bg-[#fff] dark:bg-slate-900">
+      <div className="bg-gray-10 dark:bg-slate-900">
         <Hero />
         <About />
         <Blog />
