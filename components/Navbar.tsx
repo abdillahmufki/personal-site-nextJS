@@ -9,8 +9,8 @@ const Navbar = () => {
 
   const navClass = `fixed z-50 lg:px-5 top-0 ease-in-out transition-transform duration-300 transform ${
     isScrolled
-      ? "-translate-y-full dark:bg-slate-900 bg-white z-50 shadow-md"
-      : "translate-y-0 bg-gray-10 dark:bg-slate-900 "
+      ? "-translate-y-full dark:bg-slate-900 bg-white z-50"
+      : "translate-y-0 bg-gray-10 dark:bg-slate-900  shadow-md"
   }`;
 
   return (
