@@ -59,12 +59,10 @@ export default async function Blog() {
                     {post.overview}
                   </p>
                   <div className="flex justify-end items-center ">
-                    <p className="dark:text-white  text-blue-50 dark:hover:text-blue-50">
-                      Read More
-                    </p>
+                    <p className="dark:text-white ">Read More</p>
                     <FontAwesomeIcon
                       icon={faArrowRight}
-                      className=" w-4 ml-2 dark:text-white text-blue-50 dark:hover:text-blue-50"
+                      className="dark:text-white w-4 ml-2  text-blue-50 dark:hover:text-blue-50"
                     />
                   </div>
                 </div>
