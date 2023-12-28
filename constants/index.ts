@@ -8,8 +8,7 @@ export const PROJECT_DATA_WEBSITE = [
   {
     id: 1,
     title: "Web KuyTravel",
-    description:
-      "The KuyTravel website is a modern, responsive and feature-rich website. This website was built using modern and latest technologies such as NextJs, TypeScript, Tailwind.",
+    description: "ReactJS, Tailwind CSS, NextJS",
     src: "/project/KuyTravel.png",
     link: "https://kuy-travel.vercel.app/",
   },
@@ -17,56 +16,49 @@ export const PROJECT_DATA_WEBSITE = [
   {
     id: 3,
     title: "Frontend Digital CV",
-    description:
-      "Online job portal website application that connects talented professionals like you with exciting career opportunities. Developed using a robust HTML, CSS, JavaScript, Bootstrap and jQuery stack, DigitalCV offers a seamless and easy-to-use experience for job seekers and employers alike.",
+    description: "ReactJS, Tailwind CSS",
     src: "/project/DigitalCv.png",
     link: "https://digitalcv.id/id/candidate/index.php",
   },
   {
     id: 4,
     title: "Company Profile Gestalt Systech",
-    description:
-      "I am very proud to display my skills as a developer specializing in creating captivating company profiles for software houses and IT consulting firms. One of my notable projects involved collaborating with Gestalt Systech, a leading name in the industry, to develop a stunning company profile using React.js and Tailwind CSS.",
+    description: "ReactJS, Tailwind CSS",
     src: "/project/GestaltSystech.png",
     link: "https://gestaltsystech.vercel.app/",
   },
   {
     id: 5,
     title: "GPT-3 Clone ReactJS",
-    description:
-      "GPT-3 is a clone of OpenAI, this project is a learning media javscript library for creating compnent based user intefaces, using ReactJS",
+    description: "ReactJS, Tailwind CSS",
     src: "/project/gpt3.png",
     link: "https://github.com/abdillahmufki/Modern-UI-UX-Website-in-React-JS",
   },
   {
     id: 6,
     title: "Company Profile PT. Buana Selaras Berjaya",
-    description:
-      "Our impressive company profile project utilizes the power of React.js and Tailwind CSS to create a captivating online presence for your business. With a sleek design, responsive layout, and seamless functionality, this project showcases your company's strengths and offerings in a modern and engaging way.",
+    description: "ReactJS, Tailwind CSS",
     src: "/project/Bsb.png",
     link: "http://buanaselarasberjaya.com/",
   },
   {
     id: 7,
     title: "KuyNgemils",
-    description:
-      "Built using the powerful React.js technology, KuyNgemils offers fast and responsive performance. You can explore the various available food menus smoothly, view food details, set personal preferences, and track orders easily. In addition, with an attractive and intuitive design, this application provides a pleasing user experience that pleases your eyes.",
+    description: "ReactJS, Tailwind CSS",
     src: "/project/foodorderapp.png",
     link: "https://foodorderapp-delta.vercel.app/",
   },
   {
     id: 9,
     title: "Web Bolabol",
-    description:
-      "Bolabol is a website for football lovers, where football fans can see clubs, players, managers, and stadiums. This website was created using Laravel's Eloquent ORM.",
+    description: "Laravel Blade",
     src: "/project/bolabol.jpg",
     link: "https://github.com/abdillahmufki/Bolabol",
   },
   {
     id: 10,
     title: "Management Kecamatan",
-    description:
-      "In this project, I created CRUD on the Management Kecamatan feature, with the CodeIgniter 4 Framework.",
+    description: "Laravel Blade",
     src: "/project/kecamatan1.jpg",
     link: "https://github.com/abdillahmufki/Project-Uas-Management-kecamatan",
   },

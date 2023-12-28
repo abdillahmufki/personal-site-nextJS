@@ -20,7 +20,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
-          <div className="fixed lg:bottom-5 max-[528px]:top-2 right-3 z-50">
+          <div className="fixed lg:bottom-5 max-[528px]:top-3 right-3 z-50 ">
             <ToggleDarkMode />
           </div>
           <main className="relative overflow-hidden">{children}</main>

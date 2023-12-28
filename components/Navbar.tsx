@@ -4,13 +4,15 @@ import { NAVBAR_LIST } from "@/constants";
 import Link from "next/link";
 import useScroll from "@/hooks/useScroll";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   const isScrolled = useScroll();
 
   const navClass = `fixed z-50 lg:px-5 top-0 ease-in-out transition-transform duration-300 transform ${
     isScrolled
       ? "-translate-y-full dark:bg-slate-900 bg-white z-50"
-      : "translate-y-0 bg-gray-10 dark:bg-slate-900  shadow-md"
+      : "translate-y-0 bg-gray-10 dark:bg-slate-900  shadow-sm"
   }`;
 
   return (
@@ -18,19 +20,12 @@ const Navbar = () => {
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
+            <FontAwesomeIcon
+              icon={faBars}
+              className={`w-5 h-5 text-gray-20 dark:text-white ${
+                isScrolled ? "scrolled" : ""
+              }`}
+            />
           </div>
           <ul
             tabIndex={0}
