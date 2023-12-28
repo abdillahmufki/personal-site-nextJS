@@ -12,7 +12,7 @@ async function getBlogPosts() {
   return data;
 }
 
-export default async function Blog() {
+async function Blog() {
   const data = (await getBlogPosts()) as Post[];
 
   return (
@@ -76,3 +76,5 @@ export default async function Blog() {
     </>
   );
 }
+
+export default Blog;
