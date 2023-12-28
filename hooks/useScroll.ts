@@ -9,7 +9,7 @@ const useScroll = () => {
 
   useEffect(() => {
     if (!isClient) {
-      return; // Do nothing during SSR
+      return;
     }
 
     const handleScroll = () => {
