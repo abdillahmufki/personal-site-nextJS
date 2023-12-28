@@ -1,4 +1,3 @@
-"use server";
 import { client } from "../app/lib/sanity";
 import { Post } from "../app/lib/interface";
 import Image from "next/image";

@@ -19,14 +19,6 @@ async function getData(slug: string) {
   }
 }
 
-const MyCodeFieldComponent = ({ value }: { value: any }) => {
-  return (
-    <pre>
-      <code>{value.code}</code>
-    </pre>
-  );
-};
-
 const PortableTextComponent = {
   types: {
     image: ({ value }: { value: any }) => (
@@ -39,11 +31,10 @@ const PortableTextComponent = {
       />
     ),
     code: ({ value }: { value: any }) => (
-      <pre className="bg-white shadow-sm">
+      <pre className="bg-white dark:bg-slate-950 shadow-sm">
         <code>{value.code}</code>
       </pre>
     ),
-    myCodeField: MyCodeFieldComponent,
   },
 };
 
