@@ -6,7 +6,15 @@ import { urlFor } from "@/app/lib/sanityImageUrl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-export default function Blog({ data }: { data?: Post[] }) {
+async function getBlogPosts() {
+  const query = `*[_type == "post"]`;
+  const data = await client.fetch(query);
+  return data;
+}
+
+export default async function Blog() {
+  const data = (await getBlogPosts()) as Post[];
+
   return (
     <>
       <div
@@ -14,6 +22,7 @@ export default function Blog({ data }: { data?: Post[] }) {
         id="blog">
         <div className="text-center grid grid-cols-1 lg:mb-16 mb-5">
           <div className="flex flex-col gap-2">
+            {" "}
             <h1 className="lg:text-4xl text-2xl text-gray-800 dark:text-white font-semibold">
               Article
             </h1>
@@ -23,7 +32,7 @@ export default function Blog({ data }: { data?: Post[] }) {
           </div>
         </div>
         <div className="grid lg:grid-cols-3 place-items-center md:grid-cols-2 sm:grid-cols-1 gap-3">
-          {!data || data.length === 0 ? (
+          {data.length === 0 ? (
             <div className="flex justify-center">
               <p className="text-gray-20 text-center font-semibold text-lg dark:text-white">
                 Data is empty.
@@ -55,7 +64,7 @@ export default function Blog({ data }: { data?: Post[] }) {
                     </p>
                     <FontAwesomeIcon
                       icon={faArrowRight}
-                      className="dark:text-white w-4 ml-2 text-gray-20 dark:hover:text-blue-50"
+                      className="dark:text-white w-4 ml-2  text-gray-20 dark:hover:text-blue-50"
                     />
                   </div>
                 </div>
@@ -66,17 +75,4 @@ export default function Blog({ data }: { data?: Post[] }) {
       </div>
     </>
   );
-}
-
-export async function getServerSideProps() {
-  const data = await getBlogPosts();
-  return {
-    props: { data },
-  };
-}
-
-async function getBlogPosts() {
-  const query = `*[_type == "post"]`;
-  const data = await client.fetch(query);
-  return data;
 }

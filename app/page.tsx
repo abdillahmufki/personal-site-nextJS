@@ -5,7 +5,7 @@ import Qualification from "@/pages/Qualification";
 import Services from "@/pages/Services";
 import Portfolio from "@/pages/Portfolio";
 import Contact from "@/pages/Contact";
-import Blog from "@/pages/Blog";
+import Blog from "./Blog";
 
 export default function Home() {
   return (

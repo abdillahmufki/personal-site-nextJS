@@ -9,7 +9,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   const isScrolled = useScroll();
 
-  const navClass = `fixed z-50 lg:px-5 top-0 ease-in-out transition-transform duration-300 transform ${
+  const navClass = `fixed z-50 lg:px-5 top-0 ease-in-out text-gray-20 transition-transform duration-300 transform ${
     isScrolled
       ? "-translate-y-full dark:bg-slate-900 bg-white z-50"
       : "translate-y-0 bg-gray-10 dark:bg-slate-900  shadow-sm"
@@ -40,7 +40,7 @@ const Navbar = () => {
                 }`}>
                 <Link
                   href={item.href}
-                  className="hover:font-semibold hover:text-gray-10">
+                  className="hover:font-semibold hover:text-gray-20">
                   {item.title}
                 </Link>
               </li>

@@ -28,7 +28,7 @@ const About = () => {
               />
             </div>
             <div className="lg:w-2/3">
-              <p className="lg:text-left text-center text-gray-800 dark:text-white">
+              <p className="text-center text-gray-800 dark:text-white">
                 Web developer with extensive knowledge and years of experience,
                 working in web technologies and UI/UX design, delivering quality
                 work.
