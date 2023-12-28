@@ -5,6 +5,7 @@ import { urlFor } from "@/app/lib/sanityImageUrl";
 import Link from "next/link";
 import Icon from "@/components/Icon";
 import Newsletter from "@/components/Newsletter";
+import Image from "next/image";
 
 import { ICON_HERO } from "@/constants";
 
@@ -15,13 +16,13 @@ async function getData(slug: string) {
     return data;
   } catch (error) {
     console.error("Error fetching data:", error);
-    throw error; // Rethrow the error to be caught by the component
+    throw error;
   }
 }
 
 const PortableTextComponent = {
   types: {
-    image: ({ value }: { value: any }) => (
+    Image: ({ value }: { value: any }) => (
       <img
         src={urlFor(value).url()}
         alt="Image"
