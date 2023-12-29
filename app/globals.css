@@ -149,3 +149,9 @@ body {
 .badge-primary {
   @apply bg-blue-90 text-white border-none;
 }
+
+.notfound {
+  @apply flex flex-col items-center justify-center;
+  height: 100vh;
+  background: #000;
+}

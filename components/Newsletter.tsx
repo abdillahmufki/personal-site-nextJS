@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const Newsletter = () => {
   return (
@@ -13,7 +14,9 @@ const Newsletter = () => {
           Mau dapat tips belajar coding, info teknologi, dan perkembangan karir
           sebagai programmer?
         </p>
-        <Button type="button" icons={faEnvelope} title="Subscribe" />
+        <Link href={{}}>
+          <Button type="button" icons={faEnvelope} title="Subscribe" />
+        </Link>
       </div>
     </div>
   );

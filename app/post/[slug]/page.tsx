@@ -49,7 +49,7 @@ export default async function BlogPost({
 
     return (
       <>
-        <article className="min-h-screen p-10 bg-white dark:bg-slate-900">
+        <article className="min-h-screen bg-white pt-12 px-5 dark:bg-slate-900">
           <div className="container">
             <div className="fixed left-48 top-60 flex flex-col gap-10 max-[528px]:hidden">
               {ICON_HERO.map((item, index) => (
@@ -59,7 +59,7 @@ export default async function BlogPost({
               ))}
             </div>
             <div className="flex justify-center max-[528px]:flex-col gap-10">
-              <div className="max-w-lg divide-y col-span-2 pt-10 w-full p-10 lg:w-[820px] justify-center flex-col dark:text-white  text-black">
+              <div className="max-w-lg divide-y col-span-2 pt-10 w-full p-5 lg:w-[820px] justify-center flex-col dark:text-white  text-black">
                 <header className="flex justify-center w-full border-b-2 border-blue-50 pb-4">
                   <div className="space-y-1 text-center">
                     <div className="space-y-10">
