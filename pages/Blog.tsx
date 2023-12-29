@@ -7,6 +7,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { client } from "../app/lib/sanity";
 import { urlFor } from "@/app/lib/sanityImageUrl";
 import { Post } from "../app/lib/interface";
+import Pagination from "@/components/Pagination";
 
 async function getBlogPosts() {
   const query = `*[_type == "post"]`;
@@ -35,7 +36,7 @@ function BlogPost({ post }: { post: Post }) {
           {post.overview}
         </p>
         <div className="flex justify-end items-center hover:text-blue-90">
-          <p className="dark:text-white text-gray-20 hover:text-blue-90">
+          <p className="dark:text-white dark:hover:text-blue-50 text-gray-20 hover:text-blue-90">
             Read More
           </p>
           <FontAwesomeIcon
@@ -50,6 +51,8 @@ function BlogPost({ post }: { post: Post }) {
 
 export default function Blog() {
   const [data, setData] = useState<Post[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 6;
 
   useEffect(() => {
     async function fetchData() {
@@ -59,13 +62,20 @@ export default function Blog() {
     fetchData();
   }, []);
 
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost);
+
+  const paginate = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <div
       className="flex my-10 justify-center items-center flex-col p-10"
       id="blog">
       <div className="text-center grid grid-cols-1 lg:mb-16 mb-5">
         <div className="flex flex-col gap-2">
-          {" "}
           <h1 className="lg:text-4xl text-2xl text-gray-800 dark:text-white font-semibold">
             Article
           </h1>
@@ -75,15 +85,22 @@ export default function Blog() {
         </div>
       </div>
       <div className="grid lg:grid-cols-3 place-items-center md:grid-cols-2 sm:grid-cols-1 gap-3">
-        {data.length === 0 ? (
+        {currentPosts.length === 0 ? (
           <div className="flex justify-center">
             <p className="text-gray-20 text-center font-semibold text-lg dark:text-white">
               Data is empty.
             </p>
           </div>
         ) : (
-          data.map((post) => <BlogPost key={post._id} post={post} />)
+          currentPosts.map((post) => <BlogPost key={post._id} post={post} />)
         )}
+      </div>
+      <div className="flex justify-center mt-16 mb-10">
+        <Pagination
+          totalPages={Math.ceil(data.length / postsPerPage)}
+          currentPage={currentPage}
+          onPageChange={paginate}
+        />
       </div>
     </div>
   );
