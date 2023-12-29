@@ -28,7 +28,7 @@ const About = () => {
               />
             </div>
             <div className="lg:w-2/3">
-              <p className="lg:text-left text-center text-gray-800 dark:text-white">
+              <p className="text-center text-gray-800 dark:text-white">
                 Web developer with extensive knowledge and years of experience,
                 working in web technologies and UI/UX design, delivering quality
                 work.
@@ -38,9 +38,9 @@ const About = () => {
               {items.map((item, index) => (
                 <div
                   key={index}
-                  className="mx-4 my-4 text-center md:my-0 dark:text-white">
+                  className="mx-4 my-4 text-center md:my-0 dark:text-gray-20">
                   <div className="stat">
-                    <h2 className="stat-desc text-blue-90 dark:text-white">
+                    <h2 className="stat-desc text-blue-90 dark:text-gray-20">
                       <span className="text-3xl font-bold stat-value ">
                         {item.value}
                       </span>

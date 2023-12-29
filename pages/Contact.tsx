@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className="lg:min-h-screen py-10 p-5" id="contact">
-      <div className="my-10 text-center text-[#526D82]">
+      <div className="my-10 text-center text-gray-20 dark:text-white">
         <h1 className="mt-12 text-4xl font-bold">Contact Me</h1>
         <p className="text-sm">Get in touch</p>
       </div>

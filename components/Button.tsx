@@ -1,13 +1,14 @@
-import Image from "next/image";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type ButtonProps = {
   type: "button" | "submit";
   title: string;
-  icon?: string;
+  icons: IconProp; // Change the type to IconProp
   full?: boolean;
 };
 
-const Button = ({ type, title, icon, full }: ButtonProps) => {
+const Button = ({ type, title, icons, full }: ButtonProps) => {
   return (
     <button
       className={`flexCenter bg-blue-90 p-3 text-white hover:bg-blue-50 gap-3 rounded-lg border-none ${
@@ -15,8 +16,13 @@ const Button = ({ type, title, icon, full }: ButtonProps) => {
       }`}
       type={type}>
       <label className="bold-16 cursor-pointer">{title}</label>
-      {icon && (
-        <Image src={icon} alt={`Icon ${title}`} width={24} height={24} />
+      {icons && (
+        <FontAwesomeIcon
+          icon={icons}
+          className="cursor-pointer"
+          width={18}
+          height={18}
+        />
       )}
     </button>
   );
