@@ -52,7 +52,7 @@ const Navbar = () => {
           className={`btn btn-ghost text-lg hover:text-gray-400 ${
             isScrolled
               ? "text-gray-20 scrolled dark:text-white"
-              : "text-gray-20 dark:text-white"
+              : "text-gray-20 dark:text-white dark:hover:text-blue-90"
           } max-[526px]:hidden me-3`}>
           Abdillah Mufki Auzan Mubin
         </Link>
