@@ -11,19 +11,11 @@ export const metadata: Metadata = {
   description: "This my peroanl site, you can see my portfolio and blog here",
 };
 
-type Props = {
-  children: React.ReactNode;
-  lighthouseFlags: {
-    onlyCategories: string[];
-  };
-  webVitals: boolean; // Add this line
-};
-
 export default function RootLayout({
   children,
-  lighthouseFlags,
-  webVitals, // Add this line
-}: Props) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body>
