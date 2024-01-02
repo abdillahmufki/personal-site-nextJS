@@ -9,6 +9,7 @@ import Portfolio from "@/pages/Portfolio";
 import Contact from "@/pages/Contact";
 import Blog from "@/pages/Blog";
 import Loading from "@/components/Loading";
+import WebsitePage from "@/pages/Website";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,6 +34,7 @@ export default function Home() {
           <Qualification />
           <Services />
           <Portfolio />
+          <WebsitePage />
           <Contact />
         </>
       )}

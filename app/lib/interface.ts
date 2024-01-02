@@ -11,3 +11,11 @@ export interface Post {
   };
   _createdAt: string;
 }
+
+export interface Project {
+  title: string;
+  image: string;
+  categories: any[];
+  _id: string;
+  _createdAt: string;
+}
