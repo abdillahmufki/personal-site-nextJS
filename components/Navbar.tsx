@@ -1,13 +1,24 @@
 "use client";
 import React from "react";
+
+import { usePathname } from "next/navigation";
 import { NAVBAR_LIST } from "@/constants";
 import Link from "next/link";
 import useScroll from "@/hooks/useScroll";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+
+// Navbar component
 const Navbar = () => {
+  const router = usePathname();
+  const isPostPage = router?.includes("/post/") ?? false;
   const isScrolled = useScroll();
+
+  // If on the "/post/" route, render the NavbarBlog component
+  if (isPostPage) {
+    return <NavbarBlog />;
+  }
 
   const navClass = `fixed z-50 lg:px-5 top-0 ease-in-out text-gray-20 transition-transform duration-300 transform ${
     isScrolled
@@ -16,6 +27,7 @@ const Navbar = () => {
   }`;
 
   return (
+    // Render Navbar based on conditions
     <nav className={`navbar ${navClass}`}>
       <div className="navbar-start">
         <div className="dropdown">
@@ -75,6 +87,38 @@ const Navbar = () => {
         </ul>
       </div>
     </nav>
+  );
+};
+
+const NavbarBlog = () => {
+  const isScrolled = useScroll();
+  const navClass = `fixed z-50 lg:px-5 top-0 ease-in-out text-gray-20 transition-transform duration-300 transform ${
+    isScrolled
+      ? "-translate-y-full dark:bg-slate-900 bg-white z-50"
+      : "translate-y-0 bg-gray-10 dark:bg-slate-900  shadow-sm"
+  }`;
+  return (
+    <div className={`navbar ${navClass}`}>
+      <div className="flex-1 max-[800px]:hidden">
+        <Link
+          href="/"
+          className="text-gray-20 dark:text-white dark:hover:text-blue-50 hover:text-blue-50 text-xl font-semibold">
+          Abdillah Mufki Auzan Mubin
+        </Link>
+      </div>
+      <div className="flex-none">
+        <ul className="menu menu-horizontal px-1">
+          <li>
+            <Link
+              href="/"
+              className="text-gray-20 dark:text-white text-lg font-semibold dark:hover:text-blue-50 hover:text-blue-50">
+              Home
+              <FontAwesomeIcon icon={faRightFromBracket} className="ms-2" />
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 };
 

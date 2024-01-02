@@ -1,75 +1,42 @@
-// Application.tsx
-import React, { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import Pagination from "../Pagination";
+import Pagination from "@/components/Pagination";
+import ProjectCard from "@/components/ProjectCard";
+import useProjectsByCategory from "@/hooks/useProjectsByCategory";
 
-import { PROJECT_DATA_APPLICATION } from "@/constants";
-
-interface Projects {
-  title: string;
-  description: string;
-  link: string;
-  src: string;
-}
-
-const Application: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<number>(1); // Track current page
-  const itemsPerPage: number = 6; // Number of items per page
-
-  // Get data for the current page
-  const paginatedData: Projects[] = PROJECT_DATA_APPLICATION.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
-
-  // Calculate total pages
-  const totalPages: number = Math.ceil(
-    PROJECT_DATA_APPLICATION.length / itemsPerPage
-  );
-
-  const handlePageChange = (page: number): void => {
-    if (page > 0 && page <= totalPages) {
-      setCurrentPage(page);
+const Application = () => {
+  const { projects, currentPage, totalPages, paginate } = useProjectsByCategory(
+    {
+      categoryTitle: "Mobile App",
     }
-  };
+  );
 
   return (
-    <div className="my-10 flex justify-center flex-col lg:my-10 p-5">
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
-        {paginatedData.map((project: Projects, index: number) => (
-          <Link href={project.link} target="_blank" key={index}>
-            <div className="group relative block overflow-hidden rounded-md transition-all duration-500">
-              <div className="lightbox tobii-zoom transition-all duration-500  shadow-md group-hover:opacity-40 group-hover:scale-105">
-                <Image
-                  width={350}
-                  height={300}
-                  className="w-[350px] h-[350px]"
-                  alt="img"
-                  src={project.src}
-                />
-              </div>
-              <div className="absolute -bottom-52 left-2 right-2 rounded p-4 transition-all duration-500 group-hover:bottom-2 bg-transparent">
-                <p className="hover:text-primary-600 text-gray-90 dark:text-white dark:white text-lg font-medium transition duration-500">
-                  {project.title}
-                </p>
-                <div className="badge badge-primary">
-                  <p>Application</p>
-                </div>
-              </div>
-            </div>
-          </Link>
-        ))}
+    <>
+      <div className="my-10 flex justify-center lg:my-10 p-5">
+        {projects.length === 0 ? (
+          <div className="empty-message text-gray-20 dark:text-white flex justify-center">
+            <p className="text-center">
+              No projects available for the specified category.
+            </p>
+          </div>
+        ) : (
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          </div>
+        )}
       </div>
 
-      <div className="flex justify-center my-10">
-        <Pagination
-          totalPages={totalPages}
-          currentPage={currentPage}
-          onPageChange={handlePageChange}
-        />
-      </div>
-    </div>
+      {projects.length > 0 && (
+        <div className="flex justify-center mt-16 mb-10">
+          <Pagination
+            totalPages={totalPages}
+            currentPage={currentPage}
+            onPageChange={paginate}
+          />
+        </div>
+      )}
+    </>
   );
 };
 

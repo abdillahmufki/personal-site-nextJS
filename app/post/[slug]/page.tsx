@@ -5,7 +5,6 @@ import { urlFor } from "@/app/lib/sanityImageUrl";
 import Link from "next/link";
 import Icon from "@/components/Icon";
 import Newsletter from "@/components/Newsletter";
-import Image from "next/image";
 
 import { ICON_HERO } from "@/constants";
 
@@ -49,7 +48,7 @@ export default async function BlogPost({
 
     return (
       <>
-        <article className="min-h-screen bg-white pt-12 px-5 dark:bg-slate-900">
+        <article className="min-h-screen bg-white pt-16 px-5 dark:bg-slate-900">
           <div className="container">
             <div className="fixed left-48 top-60 flex flex-col gap-10 max-[528px]:hidden">
               {ICON_HERO.map((item, index) => (
