@@ -26,7 +26,7 @@ export default function RootLayout({
           </div>
           <main className="relative overflow-hidden">{children}</main>
           <Footer />
-        </ThemeProvider>{" "}
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
