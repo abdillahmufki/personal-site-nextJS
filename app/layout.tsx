@@ -5,17 +5,25 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ToggleDarkMode from "@/components/ToogleDarkMode";
 import { Analytics } from "@vercel/analytics/react";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 export const metadata: Metadata = {
   title: "Personal Site Abdillah Mufki Auzan Mubin",
   description: "This my peroanl site, you can see my portfolio and blog here",
 };
 
+type Props = {
+  children: React.ReactNode;
+  lighthouseFlags: {
+    onlyCategories: string[];
+  };
+  webVitals: boolean; // Add this line
+};
+
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+  lighthouseFlags,
+  webVitals, // Add this line
+}: Props) {
   return (
     <html lang="en">
       <body>
@@ -28,6 +36,7 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
