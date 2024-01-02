@@ -1,6 +1,6 @@
 import {defineField, defineType} from 'sanity'
 
-export default defineType({
+const post = defineType({
   name: 'post',
   type: 'document',
   title: 'Post',
@@ -76,3 +76,5 @@ export default defineType({
     },
   ],
 })
+
+export default post

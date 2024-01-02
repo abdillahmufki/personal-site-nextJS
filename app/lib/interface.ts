@@ -13,9 +13,12 @@ export interface Post {
 }
 
 export interface Project {
+  description: string;
+  link: string;
+  src: string;
   title: string;
   image: string;
-  categories: any[];
+  categories: string[];
   _id: string;
   _createdAt: string;
 }

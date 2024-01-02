@@ -72,7 +72,7 @@ export default function Blog() {
 
   return (
     <div
-      className="flex my-10 justify-center items-center flex-col p-10"
+      className="flex my-10 justify-center items-center flex-col lg:p-10"
       id="blog">
       <div className="text-center grid grid-cols-1 lg:mb-16 mb-5">
         <div className="flex flex-col gap-2">

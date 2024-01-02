@@ -12,14 +12,19 @@ export default defineType({
     }),
     defineField({
       name: 'image',
-      title: 'Main image',
+      title: 'Image',
       type: 'image',
     }),
     defineField({
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
+      of: [{type: 'reference', to: {type: 'category'}}], // Corrected 'of' property
+    }),
+    defineField({
+      name: 'link',
+      type: 'string',
+      title: 'Link',
     }),
   ],
 })
