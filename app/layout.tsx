@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/app/theme-provider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ToggleDarkMode from "@/components/ToogleDarkMode";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Personal Site Abdillah Mufki Auzan Mubin",
@@ -26,6 +27,7 @@ export default function RootLayout({
           <main className="relative overflow-hidden">{children}</main>
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
