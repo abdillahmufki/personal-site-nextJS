@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ToggleDarkMode from "@/components/ToogleDarkMode";
 import { Analytics } from "@vercel/analytics/react";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 export const metadata: Metadata = {
   title: "Personal Site Abdillah Mufki Auzan Mubin",
   description: "This my peroanl site, you can see my portfolio and blog here",
@@ -28,6 +28,7 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
