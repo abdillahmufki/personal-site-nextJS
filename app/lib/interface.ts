@@ -4,6 +4,7 @@ export interface Post {
   overview: string;
   code: string;
   image?: string;
+  tech: string;
   content: any;
   _id: string;
   slug: {

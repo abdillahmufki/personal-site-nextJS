@@ -31,6 +31,11 @@ const post = defineType({
       },
     },
     {
+      name: 'tech',
+      title: 'Technoliogies',
+      type: 'image',
+    },
+    {
       name: 'image',
       title: 'Main image',
       type: 'image',
