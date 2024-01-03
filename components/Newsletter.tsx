@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Newsletter = () => {
   return (
-    <div className="p-6 mb-8 rounded-2xl  bg-white dark:bg-slate-800 shadow-md w-auto">
+    <div className="p-6 mb-8 rounded-2xl bg-white dark:bg-slate-800 shadow-md w-auto">
       <div className="flex flex-col gap-5">
         <h2 className="text-lg font-semibold text-black dark:text-white">
           📫 Newsletter..

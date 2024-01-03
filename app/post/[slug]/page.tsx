@@ -5,6 +5,7 @@ import { urlFor } from "@/app/lib/sanityImageUrl";
 import Link from "next/link";
 import Icon from "@/components/Icon";
 import Newsletter from "@/components/Newsletter";
+import NewArticle from "@/components/NewArticle";
 
 import { ICON_HERO } from "@/constants";
 
@@ -48,17 +49,17 @@ export default async function BlogPost({
 
     return (
       <>
-        <article className="min-h-screen bg-white pt-16 px-5 dark:bg-slate-900">
-          <div className="container">
-            <div className="fixed left-48 top-60 flex flex-col gap-10 max-[528px]:hidden">
+        <article className="min-h-screen flex justify-center gap-5 bg-white pt-16 px-5 dark:bg-slate-900">
+          <div className="max-w-5xl">
+            <div className="fixed left-32 top-52 flex flex-col gap-5 max-[528px]:hidden">
               {ICON_HERO.map((item, index) => (
                 <Link target="_blank" href={item.href} key={index}>
                   <Icon icon={item.icon} />
                 </Link>
               ))}
             </div>
-            <div className="flex justify-center max-[528px]:flex-col gap-10">
-              <div className="max-w-lg divide-y col-span-2 pt-10 w-full p-5 lg:w-[820px] justify-center flex-col dark:text-white  text-black">
+            <div className="container px-0 lg:px-6 gap-5 lg:max-w-7xl mx-auto grid grid-cols-4 md:grid-cols-12 my-4 mb:my-8 lg:my-16">
+              <div className="max-w-2xl rounded-2xl bg-white dark:bg-slate-800 shadow-md divide-y col-span-12 lg:col-span-8 pt-10 w-full p-5 lg:w-[820px] justify-center flex-col dark:text-white  text-black">
                 <header className="flex justify-center w-full border-b-2 border-blue-50 pb-4">
                   <div className="space-y-1 text-center">
                     <div className="space-y-10">
@@ -89,9 +90,10 @@ export default async function BlogPost({
                   </div>
                 </div>
               </div>
-              <div className="divide-y pt-10 flex flex-col lg:w-[20%] w-full dark:text-white bg-white dark:bg-slate-900 text-black">
+              <aside className="px-4 md:px-8 md:pl-4 md:pr-0 lg:pl-8 lg:pr-0 mt-8 lg:mt-0 col-span-12 lg:col-span-4">
                 <Newsletter />
-              </div>
+                <NewArticle />
+              </aside>
             </div>
           </div>
         </article>

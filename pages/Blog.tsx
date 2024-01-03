@@ -20,8 +20,8 @@ function BlogPost({ post }: { post: Post }) {
     <Link
       href={`/post/${post.slug.current}`}
       key={post._id}
-      className="container mx-auto px-4 lg:max-w-7xl mt-5">
-      <div className="shadow-md flex flex-col gap-3 h-96 p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600 dark:hover:outline-1">
+      className="container mx-auto w-[350px] h-[350px] mt-5">
+      <div className="shadow-md flex flex-col gap-3 p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600 dark:hover:outline-1">
         <Image
           src={urlFor(post.image).url()}
           alt="Image"
@@ -29,7 +29,7 @@ function BlogPost({ post }: { post: Post }) {
           height={300}
           className="rounded-lg w-full h-[200px]"
         />
-        <h2 className="dark:text-white text-black text-base font-semibold">
+        <h2 className="dark:text-white text-black text-base font-semibold line-clamp-1">
           {post.title}
         </h2>
         <p className="line-clamp-2 dark:text-white text-black text-sm">
@@ -41,7 +41,7 @@ function BlogPost({ post }: { post: Post }) {
           </p>
           <FontAwesomeIcon
             icon={faArrowRight}
-            className="dark:text-white w-4 ml-2  text-gray-20 dark:hover:text-blue-50"
+            className="dark:text-white w-4 ml-2 text-gray-20 dark:hover:text-blue-50"
           />
         </div>
       </div>
@@ -71,30 +71,28 @@ export default function Blog() {
   };
 
   return (
-    <div
-      className="flex my-10 justify-center items-center flex-col lg:p-10"
-      id="blog">
-      <div className="text-center grid grid-cols-1 lg:mb-16 mb-5">
-        <div className="flex flex-col gap-2">
-          <h1 className="lg:text-4xl text-2xl text-gray-800 dark:text-white font-semibold">
-            Article
-          </h1>
-          <p className="text-gray-600 dark:text-white text-sm">
-            Read the latest articles that are still fresh and warm.
-          </p>
+    <section className="my-16">
+      <div className="flex justify-center items-center flex-col gap-2">
+        <h1 className="lg:text-4xl text-2xl text-gray-800 dark:text-white font-semibold">
+          Article
+        </h1>
+        <p className="text-gray-600 dark:text-white text-sm">
+          Read the latest articles that are still fresh and warm.
+        </p>
+      </div>
+      <div className="flex my-10 justify-center items-center lg:p-10" id="blog">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
+          {currentPosts.length === 0 ? (
+            <div className="flex justify-center">
+              <p className="text-gray-20 text-center font-semibold text-lg dark:text-white">
+                Data is empty.
+              </p>
+            </div>
+          ) : (
+            currentPosts.map((post) => <BlogPost key={post._id} post={post} />)
+          )}
         </div>
-      </div>
-      <div className="grid lg:grid-cols-3 place-items-center md:grid-cols-2 sm:grid-cols-1 gap-3">
-        {currentPosts.length === 0 ? (
-          <div className="flex justify-center">
-            <p className="text-gray-20 text-center font-semibold text-lg dark:text-white">
-              Data is empty.
-            </p>
-          </div>
-        ) : (
-          currentPosts.map((post) => <BlogPost key={post._id} post={post} />)
-        )}
-      </div>
+      </div>{" "}
       <div className="flex justify-center mt-16 mb-10">
         <Pagination
           totalPages={Math.ceil(data.length / postsPerPage)}
@@ -102,6 +100,6 @@ export default function Blog() {
           onPageChange={paginate}
         />
       </div>
-    </div>
+    </section>
   );
 }
