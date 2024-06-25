@@ -33,6 +33,19 @@ export const ICON_HERO = [
   },
 ];
 
+export const DATA_WORKS = [
+  {
+    companyName: "Gestal Center",
+    position: "Frontend Developer",
+    time: "2022 - 2024",
+  },
+  {
+    companyName: "Lumio.id",
+    position: "Software Engineer",
+    time: "2024 - Now",
+  },
+];
+
 export const PEOPLE_URL = [
   "/person-1.png",
   "/person-2.png",

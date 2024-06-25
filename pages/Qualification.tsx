@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useCallback } from "react";
-import Stepper from "@/components/Stepper"; // Fix the import statement
+import Stepper from "@/components/Stepper"; // Ensure this path is correct
+import { DATA_WORKS } from "@/constants";
 
 interface TabsProps {
   activeTab: number;
@@ -52,9 +53,7 @@ const Qualification: React.FC<QualificationProps> = () => {
   );
 
   return (
-    <div
-      className="text-center mt-[150px] mb-[50px] lg:h-[400px]"
-      id="qualification">
+    <div className="text-center my-[300px] mb-[50px]" id="qualification">
       <div className="text-[#526D82]">
         <h2 className="text-4xl font-semibold text-gray-20 dark:text-white">
           Qualification
@@ -81,12 +80,15 @@ const Qualification: React.FC<QualificationProps> = () => {
           <div>
             {activeTab === 2 && (
               <div>
-                <Stepper
-                  number="Gestalt Center"
-                  description="Frontend Developer"
-                  gpa=""
-                  time="2022 - Now"
-                />
+                {DATA_WORKS.map((data) => (
+                  <Stepper
+                    key={data.companyName}
+                    number={data.companyName}
+                    description={data.position}
+                    gpa=""
+                    time={data.time}
+                  />
+                ))}
               </div>
             )}
           </div>
